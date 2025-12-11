@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bibliothèque</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h2 style="margin-left: 15px;">AsheshiBibl</h2>
+</header>
+
+<nav class="side-menu" id="sideMenu">
+    <a href="index.html">Accueil</a>
+    <a href="livres.html">Livres</a>
+    <a href="evenements.html">Évènements</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main class="container">
+    <h1>Contactez-nous</h1>
+
+    <div class="contact-info">
+        <p><strong>Adresse :</strong> 12<sup>th</sup> Street Nkruma.</p>
+        <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+        <p><strong>E-mail :</strong> Bibliothequeasheshi@gmail.com</p>
+        <p><strong>Horaires d’ouverture :</strong> Lundi - Vendredi : 9h00 - 18h00</p>
+    </div>
+
+    <div class="contact-form">
+        <form>
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Votre e-mail">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Votre message"></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    © 2025 - ASHESHI
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const sideMenu = document.getElementById('sideMenu');
+
+hamburger.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+
+    if (sideMenu.classList.contains('open')) {
+        document.body.style.marginLeft = "250px";
+    } else {
+        document.body.style.marginLeft = "0";
+    }
+});
+</script>
+
+</body>
+</html>

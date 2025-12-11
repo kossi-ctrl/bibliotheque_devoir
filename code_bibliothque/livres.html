@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livres - Bibliothèque ASHESHI</title>
+<link rel="stylesheet" href="livres.css">
+</head>
+<body>
+
+<header>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h1>AsheshiBibl</h1>
+</header>
+
+<nav class="side-menu" id="sideMenu">
+    <a href="index.html">Accueil</a>
+    <a href="livres.html">Livres</a>
+    <a href="evenements.html">Évènements</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main class="container">
+    <h2>Nos livres</h2>
+
+    <div class="search-filter">
+        <input type="text" id="search" placeholder="Rechercher par titre ou auteur...">
+        <select id="genre">
+            <option value="">Toutes les catégories</option>
+            <option value="Roman">Roman</option>
+            <option value="Dystopie">Dystopie</option>
+            <option value="Fantasy">Fantasy</option>
+        </select>
+    </div>
+
+    <div id="livres-list"></div>
+</main>
+
+<footer>
+    © 2025 - ASHESHI
+</footer>
+
+
+
+
+
+
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const sideMenu = document.getElementById('sideMenu');
+hamburger.addEventListener('click', () => sideMenu.classList.toggle('open'));
+
+
+let livresData = [];
+
+fetch('livres.json')
+    .then(res => res.json())
+    .then(data => {
+        livresData = data;
+        displayLivres(livresData);
+    })
+    .catch(err => console.error('Erreur JSON:', err));
+
+const livresList = document.getElementById('livres-list');
+const searchInput = document.getElementById('search');
+const categorieSelect = document.getElementById('categorie');
+
+function displayLivres(livres) {
+    livresList.innerHTML = '';
+    livres.forEach(livre => {
+        const div = document.createElement('div');
+        div.className = 'livre';
+        div.innerHTML = `
+            <h3>${livre.titre}</h3>
+            <p><strong>Auteur:</strong> ${livre.auteur}</p>
+            <p><strong>Année:</strong> ${livre.annee}</p>
+            <p><strong>Genre:</strong> ${livre.genre}</p>
+            <p><strong>Résumé:</strong> ${livre.resume}</p>
+        `;
+        livresList.appendChild(div);
+    });
+}
+
+
+searchInput.addEventListener('input', filterLivres);
+genreSelect.addEventListener('change', filterLivres);
+
+function filterLivres() {
+    const search = searchInput.value.toLowerCase();
+    const genre = genreSelect.value;
+
+    const filtered = livresData.filter(livre => {
+        const matchesSearch = livre.titre.toLowerCase().includes(search) ||
+                              livre.auteur.toLowerCase().includes(search);
+        const matchesGenre = genre === '' || livre.genre === genre;
+        return matchesSearch && matchesGenre;
+    });
+
+    displayLivres(filtered);
+}
+</script>
+
+</body>
+</html>

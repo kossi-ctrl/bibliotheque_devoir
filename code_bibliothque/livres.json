@@ -1,0 +1,30 @@
+[
+    {
+        "titre": "Le Petit Prince",
+        "auteur": "Antoine de Saint-Exupéry",
+        "annee": 1943,
+        "genre": "Roman",
+        "resume": "Un aviateur rencontre un mystérieux petit prince venu d'une autre planète."
+    },
+    {
+        "titre": "L'Étranger",
+        "auteur": "Albert Camus",
+        "annee": 1942,
+        "genre": "Roman",
+        "resume": "Le récit de Meursault, un homme indifférent confronté à la justice humaine."
+    },
+    {
+        "titre": "Fondation",
+        "auteur": "Isaac Asimov",
+        "annee": 1951,
+        "genre": "Science-fiction",
+        "resume": "Une organisation scientifique tente de préserver le savoir à l'échelle de la galaxie."
+    },
+    {
+        "titre": "Les Misérables",
+        "auteur": "Victor Hugo",
+        "annee": 1862,
+        "genre": "Classique",
+        "resume": "L'histoire de plusieurs personnages, notamment Jean Valjean, dans la France du XIXe siècle."
+    }
+]

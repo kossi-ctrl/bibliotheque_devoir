@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Évènements - Bibliothèque ASHESHI</title>
+<link rel="stylesheet" href="evenements.css">
+</head>
+<body>
+
+<header>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h1>AsheshiBibl</h1>
+</header>
+
+<nav class="side-menu" id="sideMenu">
+    <a href="index.html">Accueil</a>
+    <a href="livres.html">Livres</a>
+    <a href="evenements.html">Évènements</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main class="container">
+    <h2>Nos Évènements</h2>
+
+    <div class="search-filter">
+        <input type="text" id="search" placeholder="Rechercher par titre ou type...">
+        <input type="date" id="date-filter">
+    </div>
+
+    <div id="evenements-list"></div>
+</main>
+
+<footer>
+    © 2025 - ASHESHI
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const sideMenu = document.getElementById('sideMenu');
+hamburger.addEventListener('click', () => sideMenu.classList.toggle('open'));
+
+
+let evenementsData = [];
+
+fetch('evenements.json')
+    .then(res => res.json())
+    .then(data => {
+        evenementsData = data;
+        displayEvenements(evenementsData);
+    })
+    .catch(err => console.error('Erreur JSON:', err));
+
+const evenementsList = document.getElementById('evenements-list');
+const searchInput = document.getElementById('search');
+const dateInput = document.getElementById('date-filter');
+
+function displayEvenements(evenements) {
+    evenementsList.innerHTML = '';
+    evenements.forEach(ev => {
+        const div = document.createElement('div');
+        div.className = 'evenement';
+        div.innerHTML = `
+            
+            <p><strong>Titre:</strong> ${ev.titre}</p>
+            <p><strong>Date:</strong> ${ev.date}</p>
+            <p><strong>Description:</strong> ${ev.description}</p>
+        `;
+        evenementsList.appendChild(div);
+    });
+}
+
+
+searchInput.addEventListener('input', filterEvenements);
+dateInput.addEventListener('change', filterEvenements);
+
+function filterEvenements() {
+    const search = searchInput.value.toLowerCase();
+    const date = dateInput.value;
+
+    const filtered = evenementsData.filter(ev => {
+        const matchesSearch = ev.titre.toLowerCase().includes(search) || 
+                              ev.type.toLowerCase().includes(search);
+        const matchesDate = !date || ev.date === date;
+        return matchesSearch && matchesDate;
+    });
+
+    displayEvenements(filtered);
+}
+</script>
+
+</body>
+</html>

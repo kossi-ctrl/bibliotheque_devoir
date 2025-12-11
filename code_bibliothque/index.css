@@ -1,0 +1,101 @@
+header {
+    display: flex;
+    align-items: center;
+    background: #3498db;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.hamburger {
+    width: 30px;
+    cursor: pointer;
+}
+.hamburger div {
+    background: black;
+    height: 4px;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+.side-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #2980b9;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+main {
+
+     max-width: 900px;       
+    margin: 40px auto;      
+    padding: 0 20px;        
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;       
+    color: #333;   
+}
+
+
+.center-image {
+    display: block;
+    margin: 20px auto;
+}
+   
+
+.center-image:hover {
+    transform: scale(1.05);
+     border-radius: 8px;     
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.1s, box-shadow 0.3s;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #eee;
+    margin-top: 40px;
+}
+
+
+
+
+
+.welcome-text h2 {
+    font-size: 36px;
+    color: #3498db;         
+    margin-bottom: 20px;
+    text-align: center;  
+}
+
+.welcome-text p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .home-text h1 {
+        font-size: 28px;
+    }
+    .home-text p {
+        font-size: 16px;
+    }
+}

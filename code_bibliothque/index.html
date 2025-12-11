@@ -3,10 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bibliothèque</title>
+    <title>Menu Hamburger</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+<<<<<<< HEAD
 <body>
     <p>hello word!</p>
     <a href="https://www.youtube.com/watch?v=ByfFurjQDb0&list=RDKzqoSeVMGrQ&index=2"> Ecoute de la bonne musique </a>
+=======
+<body> 
+
+<header>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h1 style="margin-left: 15px;">AsheshiBibl</h1>
+</header>
+
+
+<nav class="side-menu" id="sideMenu">
+    <a href="index.html">Accueil</a>
+    <a href="livres.html">Livres</a>
+    <a href="evenements.html">Évènements</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+ <img src="images/asheshi.jpeg" class="center-image" width="500" height="300">
+   <div class="welcome-text">
+        <h2>Bienvenue à la Bibliothèque ASHESHI</h2>
+      <p>
+                La Bibliothèque universitaire ASHESHI, est un espace culturel ouvert 
+                offrant un large choix de livres,
+                 magazines et ressources numériques pour les étudiants, 
+                chercheurs et professeurs 
+                de l'université d'ASHESHI.</p>
+     <p> Notre collection comprend plus de 50 000 ouvrages, des romans contemporains
+                aux classiques littéraires, ainsi qu’une riche sélection de documents numériques accessibles en ligne. <br> 
+              Avec ses espaces lumineux et ses coins lecture confortables, 
+                la bibliothèque est un lieu idéal pour se détendre, étudier ou participer à nos événements culturels.   </p>
+               
+     <p>
+                Elle propose également des ateliers d’écriture, 
+                des conférences mensuelles et des animations pour les enfants.  
+                </p>
+
+
+</main>
+
+   
+
+
+    <footer>
+             © 2025 - ASHESHI
+     </footer>
+
+
+
+ <script>
+    const hamburger = document.getElementById('hamburger');
+const sideMenu = document.getElementById('sideMenu');
+
+hamburger.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+
+    if (sideMenu.classList.contains('open')) {
+        document.body.style.marginLeft = "250px"; // ouvre
+    } else {
+        document.body.style.marginLeft = "0";     // ferme
+    }
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+      
+>>>>>>> 22d3b67 (biblioptheque_devoir)
 </body>
 </html>
