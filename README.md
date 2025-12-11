@@ -17,9 +17,22 @@ Un projet de gestion de contenus pour une bibliothèque, incluant des pages de l
 
 # Structure du projet
 
+bibliotheque_devoir/
+├── code_bibliothque/
+│   ├── index.html        # Page d'accueil
+│   ├── index.css         # Styles de la page d'accueil
+│   ├── livres.html       # Page des livres
+│   ├── livres.css        # Styles des livres
+│   ├── livres.json       # Données des livres
+│   ├── evenements.html   # Page des événements
+│   ├── evenements.css    # Styles des événements
+│   ├── evenements.json   # Données des événements
+│   ├── contact.html      # Page de contact
+│   ├── contact.css       # Styles de la page contact
+│   └── images/           # Images utilisées dans le site
+└── README.md             # Documentation du projet
 
-
-
+---
 
 # Fonctionnalités
 
