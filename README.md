@@ -2,6 +2,7 @@
 
 Un projet de gestion de contenus pour une bibliothèque, incluant des pages de livres, événements et contacts.
 
+---
 
 # Installation
 
@@ -12,7 +13,7 @@ Un projet de gestion de contenus pour une bibliothèque, incluant des pages de l
 2. Ouvrir le projet dans Visual Studio Code (ou tout autre éditeur).  
 3. Ouvrir les fichiers HTML dans un navigateur pour tester le site.
 
-
+---
 
 # Structure du projet
 
@@ -37,7 +38,7 @@ Un projet de gestion de contenus pour une bibliothèque, incluant des pages de l
 - JavaScript  
 - JSON (pour les données de livres et événements)  
 
-
+---
 
 # Logiciel
 
@@ -46,7 +47,7 @@ Phoenix Code
 visual Studio Code 
 
 
-
+---
 
 
 # Auteurs 
@@ -56,3 +57,8 @@ Dokanu k. Daniel
 Halim Thamra 
 
 Zangbe kossi 
+
+---
+
+# Licence
+[Centre d'Études Supérieures de la Renaissance, Université de Tours](https://www.cesr.tours.fr),© Janvier 2026 par Daniel, Thamra & kossi est sous licence [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-s
