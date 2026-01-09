@@ -1,0 +1,23 @@
+{
+    
+ "events":[
+   {
+        "title": "Heure du conte",
+        "date": "2025-01-15",
+        "description": "Lecture d'histoires pour les enfants de 4 à 7 ans.",
+        "image":"images/heure_du_conte.jpg"
+    },
+    {
+        "title": "Atelier d'écriture",
+        "date": "2025-01-22",
+        "description": "Atelier pour découvrir les bases de l'écriture de nouvelles.",
+        "image":"images/atelier.jpg"
+    }, 
+    {
+        "title": "Rencontre avec un auteur",
+        "date": "2025-02-05",
+        "description": "Discussion et séance de dédicaces avec un auteur local.",
+        "image":"images/auteur.jpg"
+    }
+]
+}

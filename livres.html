@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livres - Bibliothèque ASHESHI</title>
+<link rel="stylesheet" href="livres.css">
+</head>
+<body>
+
+   <header>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h1>AshesiBibl</h1>
+</header>
+
+<nav class="side-menu" id="sideMenu">
+    <a href="accueil.html">Accueil</a>
+    <a href="livres.html">Livres</a>
+    <a href="evenements.html">Évènements</a>
+    <a href="contact.html">Contact</a>
+    
+</nav>
+
+<main class="container">
+    <h2>Nos livres</h2>
+
+    <div class="search-filter">
+        <input type="text" id="search-books" placeholder="Rechercher par titre ou auteur...">
+        <select id="genre">
+            <option value="">Toutes les catégories</option>
+            <option value="Roman">Roman</option>
+            <option value="Dystopie">Dystopie</option>
+            <option value= "Bande dessinée">BD</option>
+        </select>
+    </div>
+
+    <div id="livres-list"></div>
+</main>
+
+    <footer>© 2025 - ASHESI</footer>
+    <button id="btnTop" class="scroll-top">🔝</button>
+        <script src="script.js"></script>
+</body>
+</html>

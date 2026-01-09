@@ -1,0 +1,147 @@
+
+.book img {
+    width: 50px;        
+    height: 75px;       
+    object-fit: cover;  
+    margin-right: 10px; 
+}
+
+.book img:hover {
+    transform: scale(2.05); 
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    background: #3498db;
+    color: white;
+    padding: 15px;
+}
+header h1 {
+    margin-left: 15px;
+}
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #2980b9;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+.side-menu.open {
+    left: 0;
+}
+.side-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.side-menu a:hover {
+    background: #1f5f8b;
+}
+
+
+main.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.search-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.search-filter input, .search-filter select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.livre {
+    background: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.livre h3 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #eee;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 22px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  background: #bde4ff;
+  color: #fff;
+  z-index: 9999;
+}
+
+.scroll-top:hover {
+  background: #555;
+}
+
+
+
+
+.event, #booksList li {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.event:hover, #booksList li:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+ 
+
+@media (max-width: 600px) {
+    .search-filter {
+        flex-direction: column;
+    }
+}

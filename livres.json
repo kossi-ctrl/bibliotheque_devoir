@@ -1,0 +1,37 @@
+{
+"books":[
+    {
+        "title": "Le Petit Prince",
+        "author": "Antoine de Saint-Exupéry",
+        "year": 1943,
+        "genre": "Roman",
+        "resume": "Un aviateur rencontre un mystérieux petit prince venu d'une autre planète.",
+        "cover": "images/petit_prince.png"
+    },
+    {
+        "title": "L'Étranger",
+        "author": "Albert Camus",
+        "year": 1942,
+        "genre": "Roman",
+        "resume": "Le récit de Meursault, un homme indifférent confronté à la justice humaine.",
+        "cover": "images/etranger.jpg"
+    },
+    {
+        "title": "Fondation",
+        "author": "Isaac Asimov",
+        "year": 1951,
+        "genre": "Dystopie",
+        "resume": "Une organisation scientifique tente de préserver le savoir à l'échelle de la galaxie.",
+        "cover": "images/livre.jpg"
+    },
+    {
+        "title": "Les Misérables",
+        "author": "Victor Hugo",
+        "year": 1862,
+        "genre": "Roman",
+        "resume": "L'histoire de plusieurs personnages, notamment Jean Valjean, dans la France du XIXe siècle.",
+        "cover": "images/miserables.jpg"
+    }
+    
+]
+}
