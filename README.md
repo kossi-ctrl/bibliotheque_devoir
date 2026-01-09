@@ -1,4 +1,4 @@
-# Aseshi_library_project
+# Ashesi_library_project
 
 Un projet de gestion de contenus pour une bibliothèque, incluant des pages de livres, événements et contacts.
 
